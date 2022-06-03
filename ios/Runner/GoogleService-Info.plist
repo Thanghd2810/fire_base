@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>482708687219-drg8jmtlrsdifjco5d1on3f07s7aeos7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.482708687219-drg8jmtlrsdifjco5d1on3f07s7aeos7</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>482708687219-otnjpgh4gci7n5qem46g9thr29n52nu0.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyClrcbylfb-L4MregY9L4HnO50qs3nakL0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>482708687219</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.nextpay.riskmng</string>
+	<key>PROJECT_ID</key>
+	<string>flutter-chat-57af6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>flutter-chat-57af6.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:482708687219:ios:e09351c984cfb063fc5d06</string>
+</dict>
+</plist>
