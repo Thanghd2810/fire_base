@@ -35,7 +35,11 @@ class Messages extends StatelessWidget {
               return MessageBubble(
                 message: chat["message"],
                 isMe: chat["uid"] == FireBaseAuthService.currentUser!.uid,
-                key: ValueKey(chat["uid"]),
+                userName:
+                    FireBaseAuthService.currentUser!.email ?? "user mặc định",
+                key: ValueKey(
+                  chat["uid"],
+                ),
               );
             },
           );

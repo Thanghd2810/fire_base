@@ -5,9 +5,11 @@ class MessageBubble extends StatelessWidget {
     Key? key,
     required this.message,
     required this.isMe,
+    required this.userName,
   }) : super(key: key);
   final String message;
   final bool isMe;
+  final String userName;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -22,10 +24,19 @@ class MessageBubble extends StatelessWidget {
               color: isMe ? Colors.purple[300] : Colors.blue[200],
               borderRadius: BorderRadius.circular(12),
             ),
-            child: Text(
-              message,
-              style: TextStyle(
-                  color: isMe ? Colors.white : Colors.black, fontSize: 16),
+            child: Column(
+              children: [
+                Text(
+                  userName,
+                  style: TextStyle(
+                      color: isMe ? Colors.black38 : Colors.grey, fontSize: 14),
+                ),
+                Text(
+                  message,
+                  style: TextStyle(
+                      color: isMe ? Colors.white : Colors.black, fontSize: 16),
+                ),
+              ],
             ),
           ),
         )
