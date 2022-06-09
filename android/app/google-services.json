@@ -37,6 +37,13 @@
             {
               "client_id": "482708687219-7nugdkknhddfipfdec8cqs65rg3h66d1.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "482708687219-drg8jmtlrsdifjco5d1on3f07s7aeos7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nextpay.riskmng"
+              }
             }
           ]
         }
