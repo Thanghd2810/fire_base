@@ -6,7 +6,9 @@ import 'package:flutter_chat/screens/chat_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+      // options: DefaultFirebaseOptions.currentPlatform,
+      );
   runApp(MaterialApp(
     home: StreamBuilder(
       stream: FirebaseAuth.instance.authStateChanges(),
