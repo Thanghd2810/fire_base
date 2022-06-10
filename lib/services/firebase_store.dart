@@ -60,11 +60,13 @@ class FireBaseStore {
     required UserCredential userCredential,
     required String email,
     required String password,
+    required String urlImage,
   }) {
     return _initUserCollection.doc(userCredential.user!.uid).set(
       {
         "username": email,
         "password": password,
+        "image": urlImage,
       },
     );
   }

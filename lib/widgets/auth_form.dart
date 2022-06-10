@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_chat/widgets/user_image_picker.dart';
 
@@ -7,7 +9,8 @@ class AuthForm extends StatefulWidget {
       {required String email,
       required String username,
       required String password,
-      required bool isLogin}) submitAuthForm;
+      required bool isLogin,
+      required File userImageFile}) submitAuthForm;
   @override
   State<AuthForm> createState() => _AuthFormState();
 }
@@ -24,14 +27,30 @@ class _AuthFormState extends State<AuthForm> {
     FocusScope.of(context).unfocus();
   }
 
+  File? _userImageFile;
+
+  void _pickedImage(File file) {
+    _userImageFile = file;
+  }
+
   void _submitForm() {
     _submit();
 
+    if (_userImageFile == null && !isLogin) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: const Text("Chọn ảnh để tiếp tục"),
+          backgroundColor: Theme.of(context).errorColor,
+        ),
+      );
+      return;
+    }
     widget.submitAuthForm(context,
         email: _userEmail.trim(),
         password: _password.trim(),
         username: _userName.trim(),
-        isLogin: isLogin);
+        isLogin: isLogin,
+        userImageFile: _userImageFile!);
   }
 
   @override
@@ -46,7 +65,7 @@ class _AuthFormState extends State<AuthForm> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  if (!isLogin) UserImagePicker(),
+                  if (!isLogin) UserImagePicker(imagePickerFn: _pickedImage),
                   TextFormField(
                     keyboardType: TextInputType.emailAddress,
                     decoration: const InputDecoration(
